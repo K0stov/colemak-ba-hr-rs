@@ -2,9 +2,9 @@
 A variant of [Colemak Mod-DH ISO](https://github.com/ColemakMods/mod-dh) for Bosnian/Croatian/Serbian. Available in Cyrillic and Latin.
 
 <div align="center">
-    <img src="https://github.com/K0stov/colemak-bs-hr-rs/assets/26684396/a98ddaf7-cecb-4a09-a556-b37a2833888a" width="500">
+    <img src="gfx/colemak_dh_iso_cyrl.png" width="500">
     </br>
-    <img src="https://github.com/K0stov/colemak-bs-hr-rs/assets/26684396/f05de436-ccd4-492d-ad86-a1268eb30c07" width="500">
+    <img src="gfx/colemak_dh_iso_latn.png" width="500">
 </div>
 
 ***
@@ -12,9 +12,9 @@ A variant of [Colemak Mod-DH ISO](https://github.com/ColemakMods/mod-dh) for Bos
 <p align="center"><em>Heatmap with an excerpt from </em>Na Drini ćuprija<em></em></p>
 
 <div align="center">
-    <img src="https://github.com/K0stov/colemak-bs-hr-rs/assets/26684396/b7d8cdbb-760e-4e2a-aaa4-786fca131ba5" width="500">
+    <img src="gfx/heatmap_cyrl.png" width="500">
     </br>
-    <img src="https://github.com/K0stov/colemak-bs-hr-rs/assets/26684396/9fed292c-c984-487c-993f-b5f4bf6a75ca" width="500">
+    <img src="gfx/heatmap_latn.png" width="500">
 </div>
 
 ### Description
@@ -31,53 +31,9 @@ The Bosnian (Latin), Croatian and Serbian (Latin) layouts are the same functiona
 
 ### Download
 
-#### Windows
-1. Navigate to the [klc](klc) folder.
-2. Download the .zip archive for your respective locale and script(s).</br>(Example: *colemak_dh_bs-cyrl.zip* for Bosnian Cyrillic.)
-3. Extract the downloaded archive and run *setup.exe*.
+**Windows**: See instructions in the [klc](klc) folder.
 
-#### Linux
-1. Navigate to the [xkb](xkb) folder.
-2. Download the file for your respective locale. (Example: *ba_colemak* for Bosnian.)
-
-  ##### The following steps will require root access.
-
-3. Move the downloaded file to ```/usr/share/X11/xkb/symbols/```.
-4. Open ```/usr/share/X11/xkb/rules/evdev.lst``` in your text editor of choice.</br>*Back up the file in case something goes unexpectedly.*
-5. At the end of the ```! model``` section, append the layout:
-   ```
-     ##_colemak      %%% (Colemak-DH)
-   ```
-   *Replace *##* with your file name and *%%%* with your language name (Bosnian/Croatian/Serbian).*
-6. Save your text changes.
-7. Open ```/usr/share/X11/xkb/rules/evdev.xml``` in your text editor of choice.</br>*Back up the file in case something goes unexpectedly.*
-8. Find your language add make a new ```<layout>``` below it. Example:
-
-    ```xml
-    <layout>
-      <configItem>
-        <name>ba_colemak</name>
-        <shortDescription>bs</shortDescription>
-	      <description>Bosnian (Colemak-DH)</description>
-        <languageList><iso639Id>bos</iso639Id></languageList>
-      </configItem>
-      <variantList>
-        <variant>
-          <configItem>
-            <name>colemak_dh_cyr</name>
-            <description>Bosnian (Cyrillic, Colemak-DH)</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>colemak_dh_lat</name>
-            <description>Bosnian (Latin, Colemak-DH)</description>
-          </configItem>
-        </variant>
-      </variantList>
-    </layout>
-9. Save your text changes.
-10. Set your newly added keyboard layout in your keyboard application.
+**Linux**: See instructions in the [xkb](xkb) folder.
 
 ### Known problems
 - The digraph *nj* isn't very comfortable to type. *ije*, one of the most common trigraphs, could also be optimized; it currently requires the ring-index-middle fingers, in that order.
