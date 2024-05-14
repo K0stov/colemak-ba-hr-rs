@@ -1,0 +1,63 @@
+// Colemak-DH (Croatian) for xkb
+// 2024-05-14 by Simon Kostoski (sfkostoski@gmail.com)
+// Original Colemak-DH modified to accomodate the alphabet,
+// character combinations, digraphs/trigraphs.
+
+// ADD COLON SEMICOLON
+// key <AD10> { [    semicolon,        colon,      odiaeresis,       Odiaeresis ] };
+
+default partial alphanumeric_keys
+xkb_symbols "colemak_dh_hr" {
+
+    name[Group1]= "Croatian (Colemak-DH)";
+
+    include "latin(type3)"
+    include "rs(latalpha)"
+    include "rs(latlevel3)"
+    include "rs(common)"
+
+    key <AE11> { [        minus,   underscore,          endash,           emdash ] };
+
+    key <AD01> { [            f,            F,             any,              any ] };
+    key <AD02> { [       scaron,       Scaron,         lstroke,          Lstroke ] };
+    key <AD03> { [       cacute,       Cacute,          cacute,           Cacute ] };
+    key <AD04> { [            p,            P,           thorn,            THORN ] };
+    key <AD05> { [            b,            B,               b,                B ] };
+    key <AD06> { [            h,            H,         hstroke,          Hstroke ] };
+    key <AD07> { [            d,            D,       leftarrow,        downarrow ] };
+    key <AD08> { [            u,            U,         uparrow,       rightarrow ] };
+    key <AD09> { [       ccaron,       Ccaron,          ccaron,           Ccaron ] };
+    key <AD10> { [      dstroke,      Dstroke,         dstroke,          Dstroke ] };
+    key <AD11> { [            x,            X                                    ] };
+    key <AD12> { [   apostrophe,   braceright,             any,              any ] };
+    // key <BKSL> { [    backslash,          bar,      asciitilde,       asciitilde ] };
+
+    key <AC01> { [            r,            R,             any,              any ] };
+    key <AC02> { [            s,            S,          ssharp,          section ] };
+    key <AC03> { [            t,            T,          tcaron,           Tcaron ] };
+    key <AC04> { [            a,            A,             any,              any ] };
+    key <AC05> { [            g,            G,             any,              any ] };
+    key <AC06> { [            m,            M,              mu,        masculine ] };
+    key <AC07> { [            n,            N,          ncaron,           Ncaron ] };
+    key <AC08> { [            e,            E,          ecaron,           Ecaron ] };
+    key <AC09> { [            i,            I,          iacute,           Iacute ] };
+    key <AC10> { [            o,            O,          oslash,         Ooblique ] };
+    key <AC11> { [            q,            Q, dead_circumflex,       dead_caron ] };
+    key <AC12> { [            w,            W, dead_circumflex,       dead_caron ] };
+
+    key <LSGT> { [            z,            Z,  leftsinglequotemark, guillemotright ] };
+    key <AB01> { [       zcaron,       Zcaron,  rightsinglequotemark, guillemotleft ] };
+    key <AB02> { [            c,            C,            cent,        copyright ] };
+    key <AB03> { [            l,            L,              at,            grave ] };
+    key <AB04> { [            v,            V,       braceleft,       apostrophe ] };
+    key <AB05> { [    backslash,          bar,      braceright,       braceright ] };
+    key <AB06> { [            k,            K,            less,         multiply ] };
+    key <AB07> { [            j,            J,         greater,         division ] };
+    key <AB08> { [          any,          any,  horizconnector,     dead_cedilla ] };
+    key <AB09> { [          any,          any,  periodcentered,    dead_abovedot ] };
+    key <AB10> { [        slash,     question,    questiondown,       asciitilde ] };
+
+    key <SPCE> { [        space,        space,           space,     nobreakspace ] };
+
+    include "level3(ralt_switch)"
+};

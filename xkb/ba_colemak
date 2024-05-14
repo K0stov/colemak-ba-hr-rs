@@ -1,0 +1,118 @@
+// Colemak-DH (Bosnian) for xkb
+// 2024-05-14 by Simon Kostoski (sfkostoski@gmail.com)
+// Original Colemak-DH modified to accomodate the alphabet,
+// character combinations, digraphs/trigraphs. Cyrillic and Latin.
+
+// ADD COLON SEMICOLON
+// key <AD10> { [    semicolon,        colon,      odiaeresis,       Odiaeresis ] };
+
+default partial alphanumeric_keys
+xkb_symbols "colemak_dh_lat" {
+
+    name[Group1]= "Bosnian (Latin, Colemak-DH)";
+
+    include "latin(type3)"
+    include "rs(latalpha)"
+    include "rs(latlevel3)"
+    include "rs(common)"
+
+    key <AE11> { [        minus,   underscore,          endash,           emdash ] };
+
+    key <AD01> { [            f,            F,             any,              any ] };
+    key <AD02> { [       scaron,       Scaron,         lstroke,          Lstroke ] };
+    key <AD03> { [       cacute,       Cacute,          cacute,           Cacute ] };
+    key <AD04> { [            p,            P,           thorn,            THORN ] };
+    key <AD05> { [            b,            B,               b,                B ] };
+    key <AD06> { [            h,            H,         hstroke,          Hstroke ] };
+    key <AD07> { [            d,            D,       leftarrow,        downarrow ] };
+    key <AD08> { [            u,            U,         uparrow,       rightarrow ] };
+    key <AD09> { [       ccaron,       Ccaron,          ccaron,           Ccaron ] };
+    key <AD10> { [      dstroke,      Dstroke,         dstroke,          Dstroke ] };
+    key <AD11> { [            x,            X                                    ] };
+    key <AD12> { [   apostrophe,   braceright,             any,              any ] };
+    // key <BKSL> { [    backslash,          bar,      asciitilde,       asciitilde ] };
+
+    key <AC01> { [            r,            R,             any,              any ] };
+    key <AC02> { [            s,            S,          ssharp,          section ] };
+    key <AC03> { [            t,            T,          tcaron,           Tcaron ] };
+    key <AC04> { [            a,            A,             any,              any ] };
+    key <AC05> { [            g,            G,             any,              any ] };
+    key <AC06> { [            m,            M,              mu,        masculine ] };
+    key <AC07> { [            n,            N,          ncaron,           Ncaron ] };
+    key <AC08> { [            e,            E,          ecaron,           Ecaron ] };
+    key <AC09> { [            i,            I,          iacute,           Iacute ] };
+    key <AC10> { [            o,            O,          oslash,         Ooblique ] };
+    key <AC11> { [            q,            Q, dead_circumflex,       dead_caron ] };
+    key <AC12> { [            w,            W, dead_circumflex,       dead_caron ] };
+
+    key <LSGT> { [            z,            Z,  leftsinglequotemark, guillemotright ] };
+    key <AB01> { [       zcaron,       Zcaron,  rightsinglequotemark, guillemotleft ] };
+    key <AB02> { [            c,            C,            cent,        copyright ] };
+    key <AB03> { [            l,            L,              at,            grave ] };
+    key <AB04> { [            v,            V,       braceleft,       apostrophe ] };
+    key <AB05> { [    backslash,          bar,      braceright,       braceright ] };
+    key <AB06> { [            k,            K,            less,         multiply ] };
+    key <AB07> { [            j,            J,         greater,         division ] };
+    key <AB08> { [          any,          any,  horizconnector,     dead_cedilla ] };
+    key <AB09> { [          any,          any,  periodcentered,    dead_abovedot ] };
+    key <AB10> { [        slash,     question,    questiondown,       asciitilde ] };
+
+    key <SPCE> { [        space,        space,           space,     nobreakspace ] };
+
+    include "level3(ralt_switch)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "colemak_dh_cyr" {
+
+    name[Group1]= "Bosnian (Cyrillic, Colemak-DH)";
+
+    include "rs(cyrlevel3)"
+    include "rs(common)"
+    include "rs(cyralpha)"
+
+    key <AE11> { [        minus,   underscore,          endash,           emdash ] };
+
+    key <AD01> { [  Cyrillic_ef,  Cyrillic_EF,             any,              any ] };
+    key <AD02> { [ Cyrillic_sha, Cyrillic_SHA                                    ] };
+    key <AD03> { [ Serbian_tshe, Serbian_TSHE                                    ] };
+    key <AD04> { [  Cyrillic_pe,  Cyrillic_PE                                    ] };
+    key <AD05> { [  Cyrillic_be,  Cyrillic_BE                                    ] };
+    key <AD06> { [  Cyrillic_ha,  Cyrillic_HA                                    ] };
+    key <AD07> { [  Cyrillic_de,  Cyrillic_DE,       leftarrow,        downarrow ] };
+    key <AD08> { [   Cyrillic_u,   Cyrillic_U,         uparrow,       rightarrow ] };
+    key <AD09> { [ Cyrillic_che, Cyrillic_CHE                                    ] };
+    key <AD10> { [  Serbian_dje,  Serbian_DJE                                    ] };
+    key <AD11> { [Cyrillic_dzhe,Cyrillic_DZHE                                    ] };
+    key <AD12> { [   apostrophe,   braceright,        multiply,      dead_macron ] };
+    // key <BKSL> { [    backslash,          bar,      asciitilde,       asciitilde ] };
+
+    key <AC01> { [  Cyrillic_er,  Cyrillic_ER,             any,              any ] };
+    key <AC02> { [  Cyrillic_es,  Cyrillic_ES,             any,              any ] };
+    key <AC03> { [  Cyrillic_te,  Cyrillic_TE,             any,              any ] };
+    key <AC04> { [   Cyrillic_a,   Cyrillic_A,             any,              any ] };
+    key <AC05> { [ Cyrillic_ghe, Cyrillic_GHE,             any,              any ] };
+    key <AC06> { [  Cyrillic_em,  Cyrillic_EM,              mu,        masculine ] };
+    key <AC07> { [  Cyrillic_en,  Cyrillic_EN                                    ] };
+    key <AC08> { [  Cyrillic_ie,  Cyrillic_IE                                    ] };
+    key <AC09> { [   Cyrillic_i,   Cyrillic_I                                    ] };
+    key <AC10> { [   Cyrillic_o,   Cyrillic_O                                    ] };
+    key <AC11> { [ Cyrillic_lje, Cyrillic_LJE                                    ] };
+    key <AC12> { [ Cyrillic_nje, Cyrillic_NJE                                    ] };
+
+    key <LSGT> { [  Cyrillic_ze,  Cyrillic_ZE,  leftsinglequotemark, guillemotright ] };
+    key <AB01> { [ Cyrillic_zhe, Cyrillic_ZHE,  rightsinglequotemark, guillemotleft ] };
+    key <AB02> { [ Cyrillic_tse, Cyrillic_TSE,            cent,        copyright ] };
+    key <AB03> { [  Cyrillic_el,  Cyrillic_EL,              at,            grave ] };
+    key <AB04> { [  Cyrillic_ve,  Cyrillic_VE,       braceleft,       apostrophe ] };
+    key <AB05> { [    backslash,          bar,      braceright,       braceright ] };
+    key <AB06> { [  Cyrillic_ka,  Cyrillic_KA,            less,         multiply ] };
+    key <AB07> { [  Cyrillic_je,  Cyrillic_JE,         greater,         division ] };
+    key <AB08> { [          any,          any,  horizconnector,     dead_cedilla ] };
+    key <AB09> { [          any,          any,  periodcentered,    dead_abovedot ] };
+    key <AB10> { [        slash,     question,    questiondown,       asciitilde ] };
+
+    key <SPCE> { [        space,        space,           space,     nobreakspace ] };
+
+    include "level3(ralt_switch)"
+};
